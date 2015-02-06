@@ -5,6 +5,9 @@ INIT_BIICODE_BLOCK()
 SET(BII_LIB_TYPE SHARED)
 LIST(APPEND BII_LIB_SRC expat/lib/libexpat.def)
 
+include(expat/ConfigureChecks.cmake)
+LIST(REMOVE_ITEM BII_LIB_SRC expat/xmlwf/ct.c)
+MESSAGE(">>> " ${BII_LIB_SRC})
 # Actually create targets: EXEcutables and libraries.
 ADD_BIICODE_TARGETS()
 
@@ -20,7 +23,7 @@ ADD_BIICODE_TARGETS()
               #elif defined(HAVE_EXPAT_CONFIG_H)
               #include <expat_config.h>
               #endif /* ndef COMPILED_FROM_DSP */
-ADD_DEFINITIONS(-DCOMPILED_FROM_DSP) #! \TODO: This should be detected from CMake.
+#ADD_DEFINITIONS(-DCOMPILED_FROM_DSP) #! \TODO: This should be detected from CMake.
 
 
 
