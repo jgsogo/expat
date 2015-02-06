@@ -1,5 +1,8 @@
 # Expat XML Parser
 
+[![Build status](https://ci.appveyor.com/api/projects/status/ffbti3kc3w3ky07u?svg=true)](https://ci.appveyor.com/project/jgsogo/expat)
+
+[![Build Status](https://webapi.biicode.com/v1/badges/jgsogo/jgsogo/expat/master)](https://www.biicode.com/jgsogo/expat)
 
 ## Description
 
