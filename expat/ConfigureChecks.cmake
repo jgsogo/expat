@@ -40,5 +40,5 @@ else(HAVE_SYS_TYPES_H)
     set(SIZE_T "unsigned")
 endif(HAVE_SYS_TYPES_H)
 
-configure_file(${CMAKE_CURRENT_LIST_DIR}/expat_config.h.cmake expat_config.h)
+configure_file(${CMAKE_CURRENT_LIST_DIR}/expat_config.h.cmake "${PROJECT_BINARY_DIR}/expat_config.h" @ONLY)
 add_definitions(-DHAVE_EXPAT_CONFIG_H)

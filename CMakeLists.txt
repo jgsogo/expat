@@ -7,9 +7,11 @@ LIST(APPEND BII_LIB_SRC expat/lib/libexpat.def)
 
 include(expat/ConfigureChecks.cmake)
 LIST(REMOVE_ITEM BII_LIB_SRC expat/xmlwf/ct.c)
-MESSAGE(">>> " ${BII_LIB_SRC})
+
 # Actually create targets: EXEcutables and libraries.
 ADD_BIICODE_TARGETS()
+
+target_include_directories( ${BII_LIB_TARGET} PUBLIC "${PROJECT_BINARY_DIR}") 
 
 # Load some useful config
               #ifdef COMPILED_FROM_DSP
