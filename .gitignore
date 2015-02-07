@@ -25,4 +25,6 @@ _$*
 *.elc
 *.ln
 core
+*.dsp
+*.dsw
 # CVS default ignores end
