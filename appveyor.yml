@@ -42,7 +42,6 @@ deploy_script:
 
   
 on_success:
-  - cmd: pwd
   - cmd: dir
   - cmd: dir /
   - cmd: dir /%project_name%/
