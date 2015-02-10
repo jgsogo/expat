@@ -21,7 +21,9 @@ before_build:
   - cmd: cd %project_name%
   - cmd: bii new %block_user%/%block_name%
   # copy files and folders
-  - cmd: xcopy "%APPVEYOR_BUILD_FOLDER%" blocks\%block_user%\%block_name%\ /e
+  #- cmd: xcopy "%APPVEYOR_BUILD_FOLDER%" blocks\%block_user%\%block_name%\ /e
+  - cmd: for %%i in (../*) do if %%i NEQ "%project_name%" move "..\%%i" blocks\%block_user%\%block_name%\
+  - cmd: for /d %%i in (../*) do if %%i NEQ "%project_name%" move "..\%%i" blocks\%block_user%\%block_name%\
   - cmd: bii cpp:configure -G "Visual Studio 10"
 
 build_script:
