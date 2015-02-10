@@ -43,6 +43,10 @@ deploy_script:
   
 on_success:
   - cmd: cd blocks/%block_user%/%block_name%
+  - cmd: pwd
+  - cmd: dir
+  - cmd: dir /
+  - cmd: dir /%project_name%/
   - ps: |    
         $new_biiconf = get-content biicode.conf
         $orig_biiconf = get-content "$env:APPVEYOR_BUILD_FOLDER\biicode.conf"     
