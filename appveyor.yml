@@ -42,8 +42,6 @@ deploy_script:
 
   
 on_success:
-  - cmd: dir
-  - cmd: dir /%project_name%/
   - cmd: cd ../blocks/%block_user%/%block_name%
   - ps: |    
         $new_biiconf = get-content biicode.conf
